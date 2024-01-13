@@ -8,6 +8,7 @@ const Auth = () => {
           <h1 className="text-xl font-bold leading-tight tracking-tight md:text-2xl">
             Create an account
           </h1>
+          <p>OR</p>
         </div>
       </div>
     </section>
