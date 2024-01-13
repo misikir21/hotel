@@ -3,9 +3,16 @@ import { FcGoogle } from "react-icons/fc";
 import { BsFacebook } from "react-icons/bs";
 import { FaTwitter } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import { useState } from "react";
+const defaultFormData = {
+  email: "",
+  name: "",
+  password: "",
+};
 const inputStyle =
   "border border-gray-300 sm:text-sm text-black rounded:lg block w-full p-2.5 focus:outline-none";
 const Auth = () => {
+  const [formData, setFormData] = useState();
   return (
     <section className="container mx-auto">
       <div className="p-6 space-y-4 md:space-y-6 sm:p-8 w-80 md:w-[70] mx-auto">
