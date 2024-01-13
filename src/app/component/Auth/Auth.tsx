@@ -1,6 +1,8 @@
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
-
+import { BsFacebook } from "react-icons/bs";
+import { FaTwitter } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 const Auth = () => {
   return (
     <section className="container mx-auto">
@@ -13,6 +15,9 @@ const Auth = () => {
           <span className="inline-flex items-center">
             <AiFillGithub className="mr-3 text-4xl cursor-pointer text-black dark:text" />
             <FcGoogle className="ml-3 text-4xl cursor-pointer" />
+            <BsFacebook className="ml-3 text-4xl cursor-pointer" />
+            <FaTwitter className="ml-3 text-4xl cursor-pointer" />
+            <AiFillInstagram className="ml-3 text-4xl cursor-pointer" />
           </span>
         </div>
       </div>
