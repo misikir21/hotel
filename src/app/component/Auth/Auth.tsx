@@ -41,6 +41,7 @@ const Auth = () => {
             placeholder="name@company.com"
             required
             className={inputStyle}
+            value={defaultFormData.email}
           />
 
           <input
@@ -51,6 +52,7 @@ const Auth = () => {
             required
             minLength={6}
             className={inputStyle}
+            value={defaultFormData.password}
           />
 
           <input
@@ -60,6 +62,7 @@ const Auth = () => {
             placeholder="john doe"
             required
             className={inputStyle}
+            value={defaultFormData.name}
           />
           <button
             type="submit"
