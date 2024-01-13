@@ -1,4 +1,5 @@
-import React from "react";
+import { AiFillGithub } from "react-icons/ai";
+import { FcGoogle } from "react-icons/fc";
 
 const Auth = () => {
   return (
@@ -9,6 +10,10 @@ const Auth = () => {
             Create an account
           </h1>
           <p>OR</p>
+          <span className="inline-flex items-center">
+            <AiFillGithub className="mr-3 text-4xl cursor-pointer text-black dark:text" />
+            <FcGoogle className="ml-3 text-4xl cursor-pointer" />
+          </span>
         </div>
       </div>
     </section>
