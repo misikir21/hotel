@@ -1,9 +1,10 @@
+"use client";
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { BsFacebook } from "react-icons/bs";
 import { FaTwitter } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 const defaultFormData = {
   email: "",
   name: "",
@@ -17,6 +18,15 @@ const Auth = () => {
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
+  };
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault;
+    try {
+      console.log(formData);
+    } catch (error) {
+    } finally {
+      setFormData(defaultFormData);
+    }
   };
   return (
     <section className="container mx-auto">
