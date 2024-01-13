@@ -3,16 +3,21 @@ import { FcGoogle } from "react-icons/fc";
 import { BsFacebook } from "react-icons/bs";
 import { FaTwitter } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 const defaultFormData = {
   email: "",
   name: "",
   password: "",
 };
+
 const inputStyle =
   "border border-gray-300 sm:text-sm text-black rounded:lg block w-full p-2.5 focus:outline-none";
 const Auth = () => {
-  const [formData, setFormData] = useState();
+  const [formData, setFormData] = useState(defaultFormData);
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
   return (
     <section className="container mx-auto">
       <div className="p-6 space-y-4 md:space-y-6 sm:p-8 w-80 md:w-[70] mx-auto">
@@ -33,7 +38,7 @@ const Auth = () => {
             <AiFillInstagram className="ml-3 text-4xl cursor-pointer" />
           </span>
         </div>
-        <form className="space-y-4 md:space-y-6">
+        <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
           <input
             type="email"
             name="email"
@@ -41,7 +46,8 @@ const Auth = () => {
             placeholder="name@company.com"
             required
             className={inputStyle}
-            value={defaultFormData.email}
+            value={formData.email}
+            onChange={handleInputChange}
           />
 
           <input
@@ -52,7 +58,8 @@ const Auth = () => {
             required
             minLength={6}
             className={inputStyle}
-            value={defaultFormData.password}
+            value={formData.password}
+            onChange={handleInputChange}
           />
 
           <input
@@ -62,7 +69,8 @@ const Auth = () => {
             placeholder="john doe"
             required
             className={inputStyle}
-            value={defaultFormData.name}
+            value={formData.name}
+            onChange={handleInputChange}
           />
           <button
             type="submit"
