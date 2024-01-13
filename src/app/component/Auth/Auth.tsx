@@ -54,7 +54,14 @@ const Auth = () => {
             required
             className={inputStyle}
           />
+          <button
+            type="submit"
+            className="w-full bg-tertiary-dark focus:outline-none font-medium rounded-lg text-sm px-5 py2.5 text-center"
+          >
+            Sign Up
+          </button>
         </form>
+        <button className="text-blue-700 underline">Log In</button>
       </div>
     </section>
   );
