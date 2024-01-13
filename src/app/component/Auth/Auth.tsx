@@ -3,6 +3,8 @@ import { FcGoogle } from "react-icons/fc";
 import { BsFacebook } from "react-icons/bs";
 import { FaTwitter } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+const inputStyle =
+  "border border-gray-300 sm:text-sm text-black rounded:lg block w-full p-2.5 focus:outline-none";
 const Auth = () => {
   return (
     <section className="container mx-auto">
@@ -14,12 +16,45 @@ const Auth = () => {
           <p>OR</p>
           <span className="inline-flex items-center">
             <AiFillGithub className="mr-3 text-4xl cursor-pointer text-black dark:text" />
+            |
             <FcGoogle className="ml-3 text-4xl cursor-pointer" />
+            |
             <BsFacebook className="ml-3 text-4xl cursor-pointer" />
+            |
             <FaTwitter className="ml-3 text-4xl cursor-pointer" />
+            |
             <AiFillInstagram className="ml-3 text-4xl cursor-pointer" />
           </span>
         </div>
+        <form className="space-y-4 md:space-y-6">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="name@company.com"
+            required
+            className={inputStyle}
+          />
+
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+            required
+            minLength={6}
+            className={inputStyle}
+          />
+
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="john doe"
+            required
+            className={inputStyle}
+          />
+        </form>
       </div>
     </section>
   );
