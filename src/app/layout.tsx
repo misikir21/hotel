@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./component/Header/Header";
 import Footer from "./component/Footer/Footer";
-import Auth from "./component/Auth/Auth";
+import Auth from "./auth/Auth";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,7 +20,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <Auth />
         {children}
         <Footer />
       </body>
